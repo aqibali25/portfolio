@@ -1,0 +1,32 @@
+.dark-theme {
+  background-color: #212224;
+}
+.dark-theme nav {
+  background-color: #212224;
+}
+.dark-theme .container div {
+  background-color: #333639;
+}
+
+.dark-theme .navlinks a,
+.dark-theme .container div {
+  color: #cfccc9;
+}
+
+.dark-theme .navbuttons button {
+  background-color: #d0d2d6;
+  color: #333639;
+}
+
+.dark-theme .navbuttons button.getintouch {
+  background-color: #d0d2d6;
+  color: #333639;
+  border: none;
+}
+.dark-theme .fa-bars {
+  color: #cfccc9;
+}
+.dark-theme .navlinks a:hover:after,
+.dark-theme .navlinks a.active:after {
+  background-color: #cfccc9;
+}
