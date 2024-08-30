@@ -101,7 +101,8 @@ nav div {
 
 main {
   height: calc(100vh - 120px);
-  transition: margin-top 0.3s ease;
+
+  transition: all 0.3s ease;
 }
 
 .container {
@@ -115,7 +116,7 @@ main {
 .container > div {
   position: relative;
   border-radius: 20px;
-  min-height: 220px;
+  min-height: 300px;
   background-color: #bcbcbc;
   overflow: hidden;
 }
@@ -146,7 +147,7 @@ main .container div a {
 .title,
 .resume,
 .github {
-  height: 300px;
+  min-height: 300px;
 }
 .linkedin,
 .skills {
@@ -158,10 +159,16 @@ main .container div a {
   font-weight: 700;
   margin-right: 20px;
 }
+.title a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  padding: 40px;
+}
 .title .profileImage {
   width: 120px;
   height: 120px;
-  border: 2px solid #000000;
   background-color: #ffc400;
   border-radius: 50%;
 }
@@ -169,6 +176,31 @@ main .container div a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.title .profileText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  position: relative;
+}
+.profileText h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.profileText p {
+  font-size: 1.2rem;
+}
+.profileText i {
+  position: absolute;
+  right: -20px;
+  bottom: -10px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+.container div:hover i {
+  color: #ffc400;
 }
 @media (max-width: 1200px) {
   .title {
@@ -241,6 +273,28 @@ main .container div a {
   .navbar .navlinks a:last-child {
     display: block;
   }
+  .profileText h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .profileText p {
+    font-size: 1rem;
+  }
+  .profileText i {
+    bottom: 0px;
+  }
+}
+@media (max-width: 350px) {
+  .profileText h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .profileText p {
+    font-size: 0.8rem;
+  }
+  .profileText i {
+    bottom: 0px;
+  }
 }
 
 .navbar.active .navlinks {
@@ -251,4 +305,7 @@ main .container div a {
   .navbar .navlinks a:last-child {
     display: none;
   }
+}
+* {
+  color: #111111;
 }

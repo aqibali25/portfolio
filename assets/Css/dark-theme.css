@@ -38,3 +38,9 @@
     border-bottom: 1px solid #474747;
   }
 }
+.dark-theme * {
+  color: #cfcfcf;
+}
+.dark-theme .title .profileImage {
+  background-color: #ffc400;
+}
