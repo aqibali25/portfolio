@@ -1,4 +1,5 @@
 const themeIcon = document.getElementById("theme-icon");
+const navLinks = document.querySelector(".navlinks");
 const logo = document.querySelector(".logo img");
 const body = document.body;
 
@@ -37,17 +38,20 @@ themeIcon.addEventListener("click", function () {
     localStorage.setItem("theme", "light");
   }
 });
-
-document.querySelector(".menu-toggle").addEventListener("click", function () {
+const toggleMenu = document.getElementById("menu-toggle");
+toggleMenu.addEventListener("click", function () {
   const navbar = document.querySelector(".navbar");
-  const navLinks = document.querySelector(".navlinks");
   const mainContent = document.querySelector(".content");
 
   navbar.classList.toggle("active");
   this.classList.toggle("fa-x");
-
+  if (toggleMenu.classList.contains("fa-x")) {
+    toggleMenu.style.fontSize = "25px";
+  } else {
+    toggleMenu.style.fontSize = "35px";
+  }
   if (navbar.classList.contains("active")) {
-    mainContent.style.marginTop = navLinks.offsetHeight + "px";
+    mainContent.style.marginTop = navLinks.offsetHeight + 5 + "px";
   } else {
     mainContent.style.marginTop = "0";
   }

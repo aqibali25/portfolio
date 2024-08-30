@@ -65,6 +65,7 @@ nav div {
   left: 0;
   background-color: #111111;
 }
+
 .navbuttons {
   min-width: 200px;
   padding-right: 20px;
@@ -82,9 +83,17 @@ nav div {
   border-radius: 50px;
   background-color: #000000;
   color: #ffffff;
+  border: none;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+}
+.getintouch a {
+  all: unset;
+}
+.getintouch:hover {
+  background-color: #ffc400;
+  color: #ffffff;
 }
 /* Basic styling for layout */
 main {
@@ -154,29 +163,28 @@ main {
     flex: 0 0 100%; /* Full width for each */
   }
   .navlinks {
-    display: none; /* Hide the links and buttons */
-    flex-direction: column; /* Arrange in a column when displayed */
-    align-items: center; /* Center align the items */
-    position: absolute; /* Position the nav links absolutely */
-    top: 80px; /* Adjust to place below the navbar */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px;
     left: 0;
-    right: 0; /* Bottom border */
+    right: 0;
     padding: 10px 0;
-    border-top: 1px solid #ddd;
-    z-index: 1; /* Place above other content */
+    z-index: 1;
     transition: all 0.3s ease;
   }
   .navlinks a {
     text-align: center;
     border-bottom: 1px solid #ddd;
     width: 100%;
+    padding: 7px;
   }
   .navbuttons {
     min-width: 300px;
   }
-
   .navbar #menu-toggle {
-    display: block; /* Show the menu icon */
+    display: block;
     cursor: pointer;
   }
 }
@@ -189,7 +197,15 @@ main {
   .getintouch {
     display: none;
   }
+  .navbar .navlinks a:last-child {
+    display: block;
+  }
 }
 .navbar.active .navlinks {
   display: flex; /* Display as flex */
+}
+@media (width > 475px) {
+  .navbar .navlinks a:last-child {
+    display: none;
+  }
 }
