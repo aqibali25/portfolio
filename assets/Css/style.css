@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
 
 * {
   margin: 0;
@@ -7,9 +7,14 @@
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #111111;
 }
 
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 80px;
   background-color: #ffffff;
   display: flex;
@@ -17,6 +22,7 @@ nav {
   align-items: center;
   gap: 10px;
   overflow: hidden;
+  z-index: 1;
 }
 
 nav div {
@@ -54,7 +60,7 @@ nav div {
   bottom: -2px;
   left: 50%;
   width: 0;
-  background-color: #fff;
+  background-color: #cd9d00;
   transition: width 0.5s ease, left 0.3s ease;
 }
 
@@ -62,7 +68,7 @@ nav div {
 .navlinks a.active:after {
   width: 100%;
   left: 0;
-  background-color: #111111;
+  background-color: #cd9d00;
 }
 
 .navbuttons {
@@ -95,28 +101,28 @@ nav div {
 }
 
 .getintouch:hover {
-  background-color: #ffc400;
+  background-color: #cd9d00;
   color: #ffffff;
 }
 
 main {
   height: calc(100vh - 120px);
-
+  margin-top: 90px;
   transition: all 0.3s ease;
 }
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 20px;
   padding: 20px;
 }
 
 .container > div {
   position: relative;
   border-radius: 20px;
-  min-height: 300px;
+  min-height: 270px;
   background-color: #bcbcbc;
   overflow: hidden;
 }
@@ -143,22 +149,20 @@ main .container div a {
 
 .skills {
   flex: 0 0 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 40px 20px;
 }
-.title,
-.resume,
-.github {
-  min-height: 300px;
-}
-.linkedin,
-.skills {
-  height: 220px;
-}
+
 #menu-toggle {
   display: none;
   font-size: 30px;
   font-weight: 700;
   margin-right: 20px;
 }
+
 .title a {
   display: flex;
   flex-direction: column;
@@ -166,17 +170,21 @@ main .container div a {
   align-items: start;
   padding: 40px;
 }
+
 .title .profileImage {
-  width: 120px;
-  height: 120px;
-  background-color: #ffc400;
+  width: 100px;
+  height: 100px;
+  background-color: #cd9d00;
   border-radius: 50%;
+  transition: all 0.5s;
 }
+
 .title .profileImage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .title .profileText {
   display: flex;
   flex-direction: column;
@@ -185,13 +193,16 @@ main .container div a {
   width: 100%;
   position: relative;
 }
+
 .profileText h1 {
   font-size: 2.2rem;
   font-weight: 600;
 }
+
 .profileText p {
   font-size: 1.2rem;
 }
+
 .profileText i {
   position: absolute;
   right: -20px;
@@ -199,9 +210,66 @@ main .container div a {
   font-size: 20px;
   transition: all 0.3s ease;
 }
+
 .container div:hover i {
-  color: #ffc400;
+  transition: all 0.5s ease;
+  color: #cd9d00;
 }
+.title:hover .profileImage {
+  transform: scale(1.05);
+}
+
+.resume a,
+.github a,
+.linkedin a {
+  padding: 40px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.resume i,
+.github i,
+.linkedin i {
+  font-size: 60px;
+}
+
+.resume h2,
+.github h2,
+.linkedin h2,
+.skills h2 {
+  font-size: 2rem;
+}
+
+.skills .imagesSkils {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.skills .skillimages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.skills .skillimages img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  cursor: pointer;
+  transition: filter 0.5s ease;
+}
+
+.skills .skillimages img:hover {
+  filter: grayscale(0%);
+}
+
 @media (max-width: 1200px) {
   .title {
     flex: 0 0 100%;
@@ -275,25 +343,24 @@ main .container div a {
   }
   .profileText h1 {
     font-size: 1.5rem;
-    font-weight: 600;
   }
   .profileText p {
     font-size: 1rem;
   }
   .profileText i {
-    bottom: 0px;
+    bottom: 0;
   }
 }
+
 @media (max-width: 350px) {
   .profileText h1 {
     font-size: 1.3rem;
-    font-weight: 600;
   }
   .profileText p {
     font-size: 0.8rem;
   }
   .profileText i {
-    bottom: 0px;
+    bottom: 0;
   }
 }
 
@@ -305,7 +372,4 @@ main .container div a {
   .navbar .navlinks a:last-child {
     display: none;
   }
-}
-* {
-  color: #111111;
 }

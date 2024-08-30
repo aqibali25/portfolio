@@ -23,7 +23,7 @@
   border: none;
 }
 .dark-theme .navbuttons button.getintouch:hover {
-  background-color: #ffc400;
+  background-color: #cd9d00;
   color: #ffffff;
 }
 .dark-theme .fa-bars {
@@ -31,7 +31,7 @@
 }
 .dark-theme .navlinks a:hover:after,
 .dark-theme .navlinks a.active:after {
-  background-color: #cfccc9;
+  background-color: #cd9d00;
 }
 @media (max-width: 768px) {
   .dark-theme .navlinks a {
@@ -42,5 +42,5 @@
   color: #cfcfcf;
 }
 .dark-theme .title .profileImage {
-  background-color: #ffc400;
+  background-color: #cd9d00;
 }
