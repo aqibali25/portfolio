@@ -46,7 +46,7 @@ toggleMenu.addEventListener("click", function () {
   navbar.classList.toggle("active");
   this.classList.toggle("fa-x");
   if (toggleMenu.classList.contains("fa-x")) {
-    toggleMenu.style.fontSize = "25px";
+    toggleMenu.style.fontSize = "20px";
   } else {
     toggleMenu.style.fontSize = "35px";
   }
