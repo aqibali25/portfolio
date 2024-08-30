@@ -53,6 +53,6 @@ toggleMenu.addEventListener("click", function () {
   if (navbar.classList.contains("active")) {
     mainContent.style.marginTop = navLinks.offsetHeight + 5 + "px";
   } else {
-    mainContent.style.marginTop = "0";
+    mainContent.style.marginTop = "0px";
   }
 });

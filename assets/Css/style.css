@@ -11,9 +11,6 @@
 }
 
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 80px;
   background-color: #ffffff;
@@ -60,7 +57,7 @@ nav div {
   bottom: -2px;
   left: 50%;
   width: 0;
-  background-color: #cd9d00;
+  background-color: #fff;
   transition: width 0.5s ease, left 0.3s ease;
 }
 
@@ -68,7 +65,7 @@ nav div {
 .navlinks a.active:after {
   width: 100%;
   left: 0;
-  background-color: #cd9d00;
+  background-color: #111111;
 }
 
 .navbuttons {
@@ -101,13 +98,12 @@ nav div {
 }
 
 .getintouch:hover {
-  background-color: #cd9d00;
+  background-color: #ffc400;
   color: #ffffff;
 }
 
 main {
   height: calc(100vh - 120px);
-  margin-top: 90px;
   transition: all 0.3s ease;
 }
 
@@ -172,11 +168,10 @@ main .container div a {
 }
 
 .title .profileImage {
-  width: 100px;
-  height: 100px;
-  background-color: #cd9d00;
+  width: 120px;
+  height: 120px;
+  background-color: #ffc400;
   border-radius: 50%;
-  transition: all 0.5s;
 }
 
 .title .profileImage img {
@@ -213,61 +208,7 @@ main .container div a {
 
 .container div:hover i {
   transition: all 0.5s ease;
-  color: #cd9d00;
-}
-.title:hover .profileImage {
-  transform: scale(1.05);
-}
-
-.resume a,
-.github a,
-.linkedin a {
-  padding: 40px;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.resume i,
-.github i,
-.linkedin i {
-  font-size: 60px;
-}
-
-.resume h2,
-.github h2,
-.linkedin h2,
-.skills h2 {
-  font-size: 2rem;
-}
-
-.skills .imagesSkils {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-}
-
-.skills .skillimages {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-}
-
-.skills .skillimages img {
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
-  filter: grayscale(100%);
-  cursor: pointer;
-  transition: filter 0.5s ease;
-}
-
-.skills .skillimages img:hover {
-  filter: grayscale(0%);
+  color: #ffc400;
 }
 
 @media (max-width: 1200px) {
@@ -372,4 +313,55 @@ main .container div a {
   .navbar .navlinks a:last-child {
     display: none;
   }
+}
+
+.resume a,
+.github a,
+.linkedin a {
+  padding: 40px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.resume i,
+.github i,
+.linkedin i {
+  font-size: 60px;
+}
+
+.resume h2,
+.github h2,
+.linkedin h2,
+.skills h2 {
+  font-size: 2rem;
+}
+
+.skills .imagesSkils {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.skills .skillimages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.skills .skillimages img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  cursor: pointer;
+  transition: filter 0.5s ease;
+}
+
+.skills .skillimages img:hover {
+  filter: grayscale(0%);
 }
