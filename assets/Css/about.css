@@ -9,3 +9,141 @@
   font-style: normal;
   color: #111111;
 }
+main {
+  width: 100%;
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.aboutText {
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.aboutText h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.aboutText p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.aboutText .tagline {
+  text-align: center;
+  font-size: 1.69rem;
+  font-weight: 500;
+}
+.skills {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  gap: 50px;
+}
+.skills p {
+  font-size: 1.3rem;
+  text-align: start;
+}
+.skills .imagesSkils {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.skills .skillimages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.skills .skillimages img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  cursor: pointer;
+  transition: filter 0.5s ease;
+}
+
+.skills .skillimages img:hover {
+  filter: grayscale(0%);
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 100px;
+  background-color: #dcdcdc;
+  color: #111111;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #dcdcdc transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .aboutText h1 {
+    font-size: 3.5rem;
+  }
+  .aboutText .tagline {
+    font-size: 1.3rem;
+  }
+  .aboutText p {
+    font-size: 1.2rem;
+  }
+  .skills p {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 375px) {
+  .aboutText h1 {
+    font-size: 2.8rem;
+  }
+  .aboutText .tagline,
+  .aboutText p {
+    font-size: 1.1rem;
+  }
+  .skills p {
+    font-size: 1rem;
+  }
+}
