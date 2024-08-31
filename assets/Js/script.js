@@ -3,41 +3,49 @@ const navLinks = document.querySelector(".navlinks");
 const logo = document.querySelector(".logo img");
 const body = document.body;
 
-// Check the stored theme preference on page load
+function applyDarkTheme() {
+  body.classList.add("dark-theme");
+  themeIcon.setAttribute("src", "assets/images/light-mode.png");
+  logo.setAttribute("src", "assets/images/logo-white.png");
+  localStorage.setItem("theme", "dark");
+}
+
+function applyLightTheme() {
+  body.classList.remove("dark-theme");
+  themeIcon.setAttribute("src", "assets/images/dark-mode.png");
+  logo.setAttribute("src", "assets/images/logo-black.png");
+  localStorage.setItem("theme", "light");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const savedTheme = localStorage.getItem("theme");
 
-  if (savedTheme === "dark") {
-    body.classList.add("dark-theme");
-    themeIcon.setAttribute("src", "assets/images/light-mode.png");
-    logo.setAttribute("src", "assets/images/logo-white.png");
+  if (savedTheme) {
+    if (savedTheme === "dark") {
+      applyDarkTheme();
+    } else {
+      applyLightTheme();
+    }
   } else {
-    body.classList.remove("dark-theme");
-    themeIcon.setAttribute("src", "assets/images/dark-mode.png");
-    logo.setAttribute("src", "assets/images/logo-black.png");
+    const isSystemDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    if (isSystemDark) {
+      applyDarkTheme();
+    } else {
+      applyLightTheme();
+    }
   }
 });
 
 themeIcon.addEventListener("click", function () {
-  // Toggle dark theme class on the body
-  body.classList.toggle("dark-theme");
-
   if (body.classList.contains("dark-theme")) {
-    // If dark theme is activated, change the icon and logo to light mode
-    themeIcon.setAttribute("src", "assets/images/light-mode.png");
-    logo.setAttribute("src", "assets/images/logo-white.png");
-
-    // Save the theme preference in localStorage
-    localStorage.setItem("theme", "dark");
+    applyLightTheme();
   } else {
-    // If light theme is activated, change the icon and logo to dark mode
-    themeIcon.setAttribute("src", "assets/images/dark-mode.png");
-    logo.setAttribute("src", "assets/images/logo-black.png");
-
-    // Save the theme preference in localStorage
-    localStorage.setItem("theme", "light");
+    applyDarkTheme();
   }
 });
+
 const toggleMenu = document.getElementById("menu-toggle");
 toggleMenu.addEventListener("click", function () {
   const navbar = document.querySelector(".navbar");
