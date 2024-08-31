@@ -1,0 +1,202 @@
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+nav div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+  margin-left: 20px;
+}
+
+.navlinks {
+  min-width: 150px;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.navlinks a {
+  position: relative;
+  text-decoration: none;
+  color: #111111;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.navlinks a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  background-color: #fff;
+  transition: width 0.5s ease, left 0.3s ease;
+}
+
+.navlinks a:hover:after,
+.navlinks a.active:after {
+  width: 100%;
+  left: 0;
+  background-color: #111111;
+}
+
+.navbuttons {
+  min-width: 200px;
+  padding-right: 20px;
+  justify-content: space-around;
+}
+
+.navbuttons img {
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.navbuttons img:hover {
+  background-color: #bcbcbc;
+  border-radius: 10px;
+}
+
+.navbuttons button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.getintouch a {
+  all: unset;
+}
+
+.getintouch:hover {
+  background-color: #ffc400;
+  color: #ffffff;
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 30px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+
+  .navlinks a {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    padding: 7px;
+  }
+
+  .navbuttons {
+    min-width: 300px;
+  }
+
+  .navbar #menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 475px) {
+  .navbuttons {
+    gap: 20px;
+    min-width: fit-content;
+    justify-content: flex-end;
+  }
+
+  .getintouch {
+    display: none;
+  }
+
+  .navbar .navlinks a:last-child {
+    display: block;
+  }
+}
+
+@media (width > 475px) {
+  .navbar .navlinks a:last-child {
+    display: none;
+  }
+}
+
+.navbar.active .navlinks {
+  display: flex;
+}
+
+.dark-theme nav {
+  background-color: #212224;
+}
+
+.dark-theme .navlinks a,
+.dark-theme .navlinks a:hover:after,
+.dark-theme .navlinks a.active:after {
+  color: #cfccc9;
+}
+
+.dark-theme .navlinks a:hover:after,
+.dark-theme .navlinks a.active:after {
+  background-color: #cd9d00;
+}
+
+.dark-theme .fa-bars {
+  color: #cfccc9;
+}
+
+.dark-theme .navbuttons button {
+  background-color: #d0d2d6;
+  color: #333639;
+}
+
+.dark-theme .navbuttons button.getintouch {
+  background-color: #d0d2d6;
+  color: #333639;
+  border: none;
+}
+
+.dark-theme .navbuttons button.getintouch:hover {
+  background-color: #cd9d00;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .dark-theme .navlinks a {
+    border-bottom: 1px solid #474747;
+  }
+}
