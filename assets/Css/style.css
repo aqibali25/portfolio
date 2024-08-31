@@ -274,33 +274,3 @@ main .container div a {
   visibility: visible;
   opacity: 1;
 }
-
-/* #################################  DARK THEME STYLING ################################# */
-.dark-theme {
-  background-color: #212224;
-}
-
-.dark-theme nav {
-  background-color: #212224;
-}
-
-.dark-theme .container div {
-  background-color: #333639;
-}
-
-.dark-theme .navlinks a,
-.dark-theme .container div {
-  color: #cfccc9;
-}
-
-.dark-theme * {
-  color: #cfcfcf;
-}
-
-.dark-theme .title .profileImage {
-  background-color: #cd9d00;
-}
-
-.dark-theme .navbuttons img:hover {
-  background-color: #333639;
-}
