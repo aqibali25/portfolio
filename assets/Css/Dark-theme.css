@@ -11,11 +11,6 @@
   background-color: #333639;
 }
 
-.dark-theme .navlinks a,
-.dark-theme .container div {
-  color: #cfccc9;
-}
-
 .dark-theme * {
   color: #cfcfcf;
 }
