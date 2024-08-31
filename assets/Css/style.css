@@ -75,12 +75,16 @@ nav div {
 }
 
 .navbuttons img {
-  width: 25px;
-  height: 25px;
+  width: 45px;
+  height: 45px;
+  padding: 10px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: all 0.5s ease;
 }
-
+.navbuttons img:hover {
+  background-color: #bcbcbc;
+  border-radius: 10px;
+}
 .navbuttons button {
   margin: 0 5px;
   padding: 10px 20px;
@@ -364,4 +368,45 @@ main .container div a {
 
 .skills .skillimages img:hover {
   filter: grayscale(0%);
+}
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 100px;
+  background-color: #dcdcdc;
+  color: #111111;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #dcdcdc transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }

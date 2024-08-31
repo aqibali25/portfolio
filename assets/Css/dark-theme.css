@@ -44,3 +44,6 @@
 .dark-theme .title .profileImage {
   background-color: #cd9d00;
 }
+.dark-theme .navbuttons img:hover {
+  background-color: #333639;
+}
