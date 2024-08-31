@@ -7,7 +7,9 @@
   background-color: #212224;
 }
 
-.dark-theme .container div {
+.dark-theme .container div,
+.dark-theme main .sidenav div,
+.dark-theme .resumeContent {
   background-color: #333639;
 }
 
