@@ -15,47 +15,42 @@
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
     />
-
     <link
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
     />
-
     <link
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css"
     />
-
     <link
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
     />
-
     <link
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
     />
-
     <link
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
     />
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>About</title>
   </head>
   <body>
-    <nav class="navbar">
-      <div class="logo">
+    <nav class="navbar" data-aos="fade-down" data-aos-duration="1000">
+      <div class="logo" data-aos="fade-right" data-aos-duration="1000">
         <a href="index.html"
           ><img src="assets/images/logo-black.png" alt="Aqib Ali"
         /></a>
       </div>
-      <div class="navlinks">
+      <div class="navlinks" data-aos="fade-down" data-aos-duration="1000">
         <a href="#" class="">About</a>
         <a href="#" class="">Resume</a>
         <a href="#" class=".contact">Contact</a>
       </div>
-      <div class="navbuttons">
+      <div class="navbuttons" data-aos="fade-left" data-aos-duration="1000">
         <button class="getintouch dark-theme-divs">
           <a href="">Get in touch</a>
         </button>
@@ -64,7 +59,7 @@
       </div>
     </nav>
     <main class="content">
-      <div class="aboutText">
+      <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
         <h1>About ME</h1>
         <p class="tagline">
           Hello! I'm Aqib Ali, a skilled Web Developer. 💻 🚀
@@ -79,7 +74,7 @@
           them a reality 🤝.
         </p>
       </div>
-      <div class="skills">
+      <div class="skills" data-aos="fade-up" data-aos-duration="1000">
         <p>I have particular strengths in the following areas:</p>
         <div class="imagesSkils">
           <div class="skillimages">
@@ -108,5 +103,14 @@
       </div>
     </main>
     <script src="assets/Js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          duration: 1000, // Duration of animations in milliseconds
+          once: true, // Whether animation should happen only once - while scrolling down
+        });
+      });
+    </script>
   </body>
 </html>
