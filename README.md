@@ -1,5 +1,4 @@
 # Aqib Ali's Portfolio
-==========================
 
 ## Description
 Aqib Ali's portfolio site showcasing his skills and experience in web development.
@@ -29,4 +28,5 @@ MIT License
 
 ## Contact
 Aqib Ali
+
 aqibalikalwar1@gmail.com
