@@ -8,8 +8,7 @@
 }
 
 .dark-theme .container div,
-.dark-theme main .sidenav div,
-.dark-theme .resumeContent {
+.dark-theme main .sidenav div {
   background-color: #333639;
 }
 
@@ -23,4 +22,14 @@
 
 .dark-theme .navbuttons img:hover {
   background-color: #333639;
+}
+.dark-theme .socialLinks a {
+  border: 1px solid #bcbcbc;
+}
+.dark-theme .socialLinks a:hover {
+  background-color: #bcbcbc;
+  color: #333639;
+}
+.dark-theme .socialLinks a:hover i {
+  color: #333639;
 }
