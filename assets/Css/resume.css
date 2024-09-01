@@ -16,6 +16,7 @@ main {
   align-items: start;
   padding: 0 30px;
   gap: 50px;
+  transition: all 0.5s ease;
 }
 main .sidenav {
   width: 100%;
@@ -36,7 +37,7 @@ main .sidenav {
 .sidenav .intro {
   justify-content: space-around;
   align-items: flex-start;
-  padding: 50px;
+  padding: 30px;
 }
 .intro span {
   display: flex;
@@ -54,7 +55,7 @@ main .sidenav {
 
 .intro .name label {
   margin-top: -15px;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .intro .email,
 .address {
@@ -113,5 +114,32 @@ main .sidenav {
   }
   main {
     gap: 20px;
+  }
+}
+@media (max-width: 475px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro .name label {
+    margin-top: -15px;
+    font-size: 1rem;
+  }
+  .intro .email,
+  .address {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 350px) {
+  .intro h1 {
+    font-size: 1.8rem;
+  }
+  .intro .name label {
+    margin-top: -10px;
+    font-size: 0.9rem;
+  }
+  .intro .email,
+  .address {
+    font-size: 0.8rem;
   }
 }

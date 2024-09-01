@@ -46,26 +46,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const toggleMenu = document.getElementById("menu-toggle");
-  toggleMenu.addEventListener("click", function () {
-    const navbar = document.querySelector(".navbar");
-    const mainContent = document.querySelector(".content");
+  const navbar = document.querySelector(".navbar");
+  const mainContent = document.querySelector(".content");
 
-    if (navbar && mainContent) {
+  // Ensure all elements are found before adding the event listener
+  if (toggleMenu && navbar && mainContent) {
+    toggleMenu.addEventListener("click", function () {
       navbar.classList.toggle("active");
       this.classList.toggle("fa-x");
-      if (toggleMenu.classList.contains("fa-x")) {
-        toggleMenu.style.fontSize = "20px";
+
+      if (this.classList.contains("fa-x")) {
+        this.style.fontSize = "20px";
       } else {
-        toggleMenu.style.fontSize = "35px";
+        this.style.fontSize = "35px";
       }
+
       if (navbar.classList.contains("active")) {
         mainContent.style.marginTop = navLinks.offsetHeight + 5 + "px";
       } else {
         mainContent.style.marginTop = "0px";
       }
-    }
-  });
+    });
+  }
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({
     duration: 1500,
