@@ -12,10 +12,6 @@
   background-color: #333639;
 }
 
-.dark-theme * {
-  color: #cfcfcf;
-}
-
 .dark-theme .title .profileImage {
   background-color: #cd9d00;
 }
@@ -35,4 +31,10 @@
 }
 .dark-theme .resumeContent div div strong {
   color: #ddc164;
+}
+.dark-theme .contact-form {
+  background-color: #333639;
+}
+.dark-theme * {
+  color: #cfcfcf;
 }

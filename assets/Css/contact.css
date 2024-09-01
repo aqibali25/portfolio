@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #111111;
+}
+main {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  min-height: calc(100vh - 110px);
+  padding: 20px;
+}
+
+.contact-info {
+  flex: 1;
+  padding: 20px;
+  gap: 15px;
+}
+.contact-info strong,
+.contact-info strong i {
+  font-weight: 600;
+}
+.contact-info h1 {
+  font-size: 2em;
+  font-weight: 600;
+  color: #ffc400;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  max-width: 480px;
+  padding: 0 20px;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.5s ease;
+}
+.contact-info a:hover {
+  color: #ffffff;
+  background-color: #f1b900;
+}
+.contact-info a:hover * {
+  transition: all 0.5s ease;
+  color: #ffffff;
+}
+
+.contact-form {
+  flex: 1;
+  background-color: #dcdcdc;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: fit-content;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ffc813;
+  outline: none;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: all 0.5s ease;
+}
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 10px 0 #ffc813;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 200px;
+  max-height: 300px;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  background-color: #f1b900;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  box-shadow: 0 0 10px 0 #f1b900;
+  border: 2px solid #f1b900;
+  background-color: transparent;
+}
+
+@media (max-width: 1024px) {
+  main {
+    flex-direction: column;
+  }
+}
+@media (max-width: 550px) {
+  .contact-info h1 {
+    font-size: 1.2rem;
+  }
+  .contact-info strong {
+    display: none;
+  }
+  .contact-info a {
+    width: 100%;
+    padding-left: 0;
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 400px) {
+  .contact-info h1 {
+    font-size: 1rem;
+  }
+  .contact-info a {
+    font-size: 0.9rem;
+  }
+}
