@@ -101,11 +101,12 @@ main .sidenav {
 }
 .resumeContent {
   width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 .resumeContent div {
   width: 100%;
@@ -154,6 +155,12 @@ main .sidenav {
 .certificationItem a {
   width: fit-content;
   text-decoration: none;
+  transition: all 0.5s ease;
+}
+.certificationItem a:hover {
+  background-color: #ffc400;
+  color: #ffffff;
+  padding: 0 15px;
 }
 .projectItem span {
   display: flex;
@@ -172,11 +179,15 @@ main .sidenav {
   font-size: 15px;
 }
 .projectItem a:hover {
-  background-color: #ffc400;
+  background-color: #fad044;
   color: #ffffff;
 }
 .projectItem label {
   font-size: 1.1rem;
+}
+.resumeContent div div strong {
+  font-weight: bold;
+  color: #ffc813;
 }
 @media (max-width: 1024px) {
   main {

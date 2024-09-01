@@ -33,3 +33,6 @@
 .dark-theme .socialLinks a:hover i {
   color: #333639;
 }
+.dark-theme .resumeContent div div strong {
+  color: #ddc164;
+}
