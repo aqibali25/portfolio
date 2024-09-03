@@ -15,6 +15,7 @@ main {
   width: 100%;
   min-height: calc(100vh - 110px);
   padding: 20px;
+  transition: all 0.5s ease;
 }
 
 .contact-info {
